@@ -16,5 +16,16 @@ namespace tabuleiro
             this.colunas = colunas;
             pecas = new Peca[linhas, colunas];
         }
+
+        public Peca Peca(int linha, int coluna)
+        {
+            return pecas[linha, coluna];
+        }
+
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            pecas[pos.Linha, pos.Coluna] = p;
+            p.posicao = pos;
+        }
     }
 }
